@@ -629,3 +629,46 @@ h3{letter-spacing:.02em}
 .copiado{font-size:.86rem;color:var(--cinza);margin-top:.6rem;min-height:1.2em}
 .paises{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:1.4rem}
 .paises span{padding:.5rem .95rem;border-radius:100px;border:1.5px solid var(--borda);font-weight:700;background:var(--grafite)}
+
+/* =====================================================================
+   Imagens de referência (pedido) + lupa do painel — igual nos dois sites
+   ===================================================================== */
+.anexos .rotulo-campo small{text-transform:none;letter-spacing:0;font-weight:600}
+.anexo-zona{
+  display:flex;flex-direction:column;align-items:flex-start;gap:.55rem;
+  padding:1rem;border:2px dashed var(--borda);border-radius:16px;background:var(--grafite);
+  transition:border-color .15s, background .15s;
+}
+.anexo-zona.arrastando{border-color:var(--prata);background:var(--chumbo)}
+.anexo-add{min-height:56px;font-size:1rem;padding:.9rem 1.4rem;gap:.6rem}
+.anexo-add:disabled{opacity:.6}
+.anexo-dica{font-size:.9rem;color:var(--cinza);line-height:1.5}
+.so-desktop{display:none}
+@media(hover:hover) and (pointer:fine){ .so-desktop{display:inline} }
+@media(max-width:600px){ .anexo-add{width:100%} }
+.anexo-lista{list-style:none;display:flex;flex-wrap:wrap;gap:.6rem;margin-top:.7rem}
+.anexo-lista:empty{display:none}
+.anexo-lista li{position:relative;width:88px;height:88px;border-radius:12px;overflow:hidden;border:1.5px solid var(--borda);background:var(--chumbo)}
+.anexo-lista img{width:100%;height:100%;object-fit:cover}
+.anexo-tira{
+  position:absolute;top:4px;right:4px;width:34px;height:34px;border-radius:50%;
+  display:grid;place-items:center;background:rgba(0,0,0,.82);color:#fff;border:1.5px solid rgba(255,255,255,.7);
+}
+.anexo-tira:hover{background:#000}
+.anexo-tira::before{content:"";position:absolute;inset:-6px}
+.anexo-msg .aviso{margin:.6rem 0 0}
+.anexo-ok{
+  max-width:34rem;margin:0 auto 1rem;padding:.7rem 1rem;border-radius:12px;font-weight:700;font-size:.95rem;
+  border:1px solid rgba(37,211,102,.45);background:rgba(37,211,102,.1);color:var(--creme);
+}
+.anexo-ok.anexo-falhou{border-color:var(--vermelho);background:transparent}
+/* painel */
+.anexo-admin{margin-top:.55rem}
+.anexo-admin .anexo-lista{margin-top:0}
+.anexo-admin .anexo-lista li{width:72px;height:72px}
+.anexo-admin .anexo-lista button{display:block;width:100%;height:100%;cursor:zoom-in}
+.anexo-admin > span{display:block;margin-top:.4rem;font-size:.82rem}
+.lupa{margin:auto;max-width:min(94vw,1000px);max-height:94vh;padding:0;border:1px solid var(--borda);border-radius:16px;background:var(--fundo);color:var(--creme)}
+.lupa::backdrop{background:rgba(0,0,0,.82)}
+.lupa-topo{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:.6rem .6rem .6rem 1rem}
+.lupa img{display:block;max-width:100%;max-height:calc(94vh - 64px);margin:0 auto;object-fit:contain}
